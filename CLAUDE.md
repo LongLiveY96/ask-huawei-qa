@@ -16,15 +16,24 @@
 | `ask_ai_batch` | 华为官方 AI 问答（批量并行） | `ask_ai_batch({ queries: ["问题1", "问题2"] })` |
 | `ask_ai_docs` | 文档定位问答（单次，快速） | `ask_ai_docs({ query: "HdsTabs 官方文档有哪些" })` |
 | `ask_ai_docs_batch` | 文档定位问答（批量并行，快速） | `ask_ai_docs_batch({ queries: ["HdsTabs 文档", "Navigation 文档"] })` |
+| `read_doc_by_url` | 根据官方文档链接读取完整正文 | `read_doc_by_url({ url: "https://developer.huawei.com/consumer/cn/doc/..." })` |
 | `read_more` | 读取被截断的完整回答 | `read_more({ resourceId: "qa-result-1-xxx" })` |
 
 ### 使用策略
 
 - **只需要“官方文档链接 + 简短说明”** → `ask_ai_docs`
+- **已经拿到官方文档链接，还需要完整正文** → `read_doc_by_url`
 - **批量定位官方文档** → `ask_ai_docs_batch`（并行，优先）
 - **多个复杂问题（需要完整解释）** → `ask_ai_batch`
 - **单个复杂问题（需要完整解释）** → `ask_ai`
 - **回答被截断** → `read_more`（缓存有效期 1 小时）
+
+### 文档链路
+
+- 先用 `ask_ai_docs` / `ask_ai_docs_batch` 定位官方文档链接
+- 只接受 `https://developer.huawei.com/consumer/cn/doc/` 下的正式文档链接
+- 需要正文时，再把链接交给 `read_doc_by_url`
+- 不要把“只拿到链接”误当成“已经读过文档正文”
 
 ---
 

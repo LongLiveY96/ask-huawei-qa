@@ -18,6 +18,7 @@
 ```text
 请给出 <主题> 的官方文档链接，并用简短语句说明每个链接解决的问题。
 仅需要 developer.huawei.com 下且路径为 /consumer/cn/doc/ 的链接。
+如果后续需要完整正文，我会再调用 read_doc_by_url 读取，不需要在这一步展开长篇解释。
 ```
 
 ## 3) 风格约束（可选追加）
@@ -34,3 +35,10 @@
   - `DOC_SERVICE_TOKEN`
 - 可选：
   - `DOC_SERVICE_TIMEOUT_MS`，默认 `30000`
+
+## 5) 推荐调用链
+```text
+先用 ask_ai_docs 定位官方文档链接。
+确认链接属于 https://developer.huawei.com/consumer/cn/doc/ 之后，
+再用 read_doc_by_url 读取完整正文。
+```
