@@ -1,0 +1,32 @@
+{
+  "name": "ask-huawei-qa",
+  "version": "1.0.0",
+  "description": "MCP Server for Huawei AI Q&A and remote document retrieval",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "ask-huawei-qa": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "keywords": [
+    "mcp",
+    "harmonyos",
+    "huawei",
+    "ai",
+    "qa"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
