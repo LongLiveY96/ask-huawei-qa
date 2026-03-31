@@ -1,4 +1,4 @@
-# ask-huawei-qa
+# ask_huawei_mcp
 
 本地 `stdio` MCP，职责只做两件事：
 
@@ -21,6 +21,8 @@ node dist/index.js
 - `DOC_SERVICE_BASE_URL`
 - `DOC_SERVICE_TOKEN`
 - `DOC_SERVICE_TIMEOUT_MS`
+- `DOC_SERVICE_SYNC_POLL_INTERVAL_MS`
+- `DOC_SERVICE_SYNC_WAIT_TIMEOUT_MS`
 
 ## 工具
 
@@ -31,3 +33,6 @@ node dist/index.js
 - `read_doc_by_url`
 - `read_more`
 
+## 邀请测试地址
+
+- https://appgallery.huawei.com/link/invite-test-wap?taskId=950c3ff7c47af3d4ea25b68382a491da&invitationCode=4JFWVmfSAyc
