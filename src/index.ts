@@ -18,8 +18,8 @@ const TOOLS: Tool[] = [
     description: `向华为开发者官方智能问答助手提问。
 
 ## 使用场景
-- 复杂的开发问题（整合了官方文档 + 社区经验）
-- 需要代码示例和最佳实践
+- 复杂的 HarmonyOS / ArkTS 开发问题
+- 需要官方智能助手给出代码示例和最佳实践
 - 错误排查和问题解决
 - 获取最新的开发建议
 
@@ -33,7 +33,7 @@ ask_ai({ query: "Navigation 怎么实现页面跳转并传参" })
 ask_ai({ query: "List 组件性能优化方法" })
 ask_ai({ query: "@State 和 @Prop 的区别", thinking: false })   // 简单概念定义,跳过深度思考更快
 
-返回华为官方智能助手的回答,包含参考链接。`,
+返回华为官方智能助手的回答,可能包含参考链接。`,
     inputSchema: {
       type: 'object',
       properties: {
